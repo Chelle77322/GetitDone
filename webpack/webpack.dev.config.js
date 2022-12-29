@@ -13,7 +13,8 @@ let developmentConfig = () => {
     entry: path.join(__dirname, "src/js/client", "client.js"),
     output: {
       path: path.join(__dirname, "dist", 'js'),
-      filename: '[name].js'
+      filename: 'main.js',
+      publicPath: "/",
     },
     debug: true,
     devtool: 'source-map',
