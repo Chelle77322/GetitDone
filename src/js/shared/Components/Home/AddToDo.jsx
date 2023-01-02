@@ -1,7 +1,8 @@
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom"; 
 import Redux from "redux";
 import { connect} from "react-redux";
+
 
 import {AddItem} from "../../Actions/ToDoAction.js";
 
@@ -12,8 +13,8 @@ import FormControl from 'react-bootstrap/lib/FormControl';
 import InputGroup from 'react-bootstrap/lib/InputGroup';
 import Button from 'react-bootstrap/lib/Button';
 
-@connect()
-export default class AddToDo extends React.Component{
+connect(mapStateToProps)
+export default class Add extends Component{
 	render(){	
 		return(
 			<div>

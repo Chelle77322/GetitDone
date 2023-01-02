@@ -1,7 +1,7 @@
-import React from "react";
+import React, {Component} from "react";
 import ReactDOM from "react-dom"; 
 import {DeleteItem, EditIconClicked, EditItem, CompleteItem} from "../../Actions/ToDoActions";
-import Redux from "redux";
+
 import { connect} from "react-redux";
 
 import Grid from 'react-bootstrap/lib/Grid';
@@ -23,8 +23,8 @@ const mapStateToProps = (state) => ({
 })
 
 
-@connect(mapStateToProps)
-export default class ListToDoItems extends React.Component{
+connect(mapStateToProps)
+export default class ListToDoItems extends Component{
 	close(id,editedItem){
 		this.props.dispatch(EditItem(id, editedItem));	
 	}

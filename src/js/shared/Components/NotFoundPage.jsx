@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router';
 
-export default class NotFoundPage extends React.Component {
+export default class NotFoundPage extends Component {
   render() {
     return (
       <div className="not-found">

@@ -1,6 +1,6 @@
 import { merge }  from 'webpack-merge';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+//import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -20,9 +20,7 @@ let webpackBaseConfig = () => {
         maxAssetSize: 512000
     },
       module: {
-      
-    
-        rules: [
+    rules: [
           
           {
             test: /\.js$/,
@@ -39,16 +37,30 @@ let webpackBaseConfig = () => {
             }
           },
           {
+            test: /\.module\.(sa|sc|c)ss$/,
+            use: [
+              {
+              loader:'style-loader',
             
-              test: /\.(sa|sc|c)ss$/,
-              use: [
-    
-                'css-loader',
-                'sass-loader',
-                
-              ]
-            
+              },
+              {
+                loader: 'css-loader',
+               
+              },
+              'sass-loader'
+            ]
           },
+          {
+            
+            test: /\.(sa|sc|c)ss$/,
+            use: [MiniCssExtractPlugin.loader,
+  
+              'css-loader',
+              'sass-loader',
+              
+            ]
+          
+        },
           {
             test: /\.(jpg|png)$/,
             use: {
@@ -60,23 +72,23 @@ let webpackBaseConfig = () => {
 
        
       },
-     resolve:{
-      fallback:{
-        stream: false,
-        url: path.resolve("url/"),
-        fs: path.resolve("fs"),
-    tls: false,
-    net: false,
-    path: path.resolve("path-browserify"),
-   zlib: false,
-   http: path.resolve("stream-http"),
-    https: path.resolve("stream-http"),
-   stream: path.resolve("stream-browserify"),
-    crypto: path.resolve("crypto-browserify"),
-    assert: false,
-    async_hooks: false
-      }
-     },
+    // resolve:{
+      //fallback:{
+        //stream: false,
+        //url: path.resolve("url/"),
+        //fs: path.resolve("fs"),
+   // tls: false,
+   // net: false,
+   // path: path.resolve("path-browserify"),
+   //zlib: false,
+   //http: path.resolve("stream-http"),
+   // https: path.resolve("stream-http"),
+   //stream: path.resolve("stream-browserify"),
+   // crypto: path.resolve("crypto-browserify"),
+    //assert: false,
+    //async_hooks: false
+      //}
+     //},
       plugins: [
         new HtmlWebpackPlugin({
           template: './public/index.html',
@@ -87,21 +99,20 @@ let webpackBaseConfig = () => {
         }),
         //new optimize.DedupePlugin(),
        
-        new UglifyJsPlugin({
-          uglifyOptions: {
-            mangle: true,
-            warnings: false,
-            compress: {
-                pure_getters: true,
-                unsafe: true,
-                unsafe_comps: true,
+        //new UglifyJsPlugin({
+          //uglifyOptions: {
+           // mangle: true,
+            //warnings: false,
+            //compress: {
+              //  pure_getters: true,
+                //unsafe: true,
+                //unsafe_comps: true,
                 //screw_ie8: true, // no such option in uglify
-            },
-          },
-        }),
+            //},
+          //},
+        //}),
         new MiniCssExtractPlugin({
-          filename: "[name].css",
-          chunkFilename: "[id].css"
+
           
         })
       ],

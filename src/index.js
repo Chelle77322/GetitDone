@@ -1,1 +1,1 @@
-//This is here otherwise it doesn't work for some reason ????
+//** Putting it here to fix package.json relative path error */

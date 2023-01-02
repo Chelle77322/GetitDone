@@ -5,7 +5,7 @@ import {renderToString} from 'react-dom/server'
 import allReducers from '../shared/Reducers/AllReducers.js'
 import {store, configureStore} from 'redux'
 
-var routes = require('../shared/routes.js');
+var routes = require('../shared/routes.jsx');
 
 var path = require('path');
 var bodyparser = require('body-parser');
@@ -14,9 +14,9 @@ var express = require('express');
 var app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../../views'));
+app.set('views', path.join(__dirname, 'views'));
 
-app.use(express.static(path.join(__dirname, '../../../dist')));
+app.use(express.static(path.join(__dirname, 'dist')));
 
 app.get('*',  (req, res) =>  {
 
@@ -56,7 +56,7 @@ app.get('*',  (req, res) =>  {
 });
 
 // start the server
-var port = process.env.PORT || 8082;
+var port = process.env.PORT || 8080;
 var env = process.env.NODE_ENV || 'development';
 app.listen(port,  (err) => {
     if (err) {

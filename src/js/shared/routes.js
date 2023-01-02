@@ -2,10 +2,10 @@ import React from "react";
 
 import { Route, IndexRoute} from "react-router";
 
-import Layout from "./components/Layout.js";
-import Index from "./components/Index.js";
-import Help from "./components/Help/Help.js";
-import NotFoundPage from "./components/NotFoundPage.js";
+import Layout from "./components/Layout.jsx";
+import Index from "./components/Index.jsx";
+import Help from "./components/Help/Help.jsx";
+import NotFoundPage from "./components/NotFoundPage.jsx";
 
 const routes = (
   <Route path="/" component={Layout} >
@@ -16,4 +16,3 @@ const routes = (
 );
 
 export default routes;
-Footer
