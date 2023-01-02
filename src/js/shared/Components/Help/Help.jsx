@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 //import ReactDOM from "react-dom"; 
 import NavigationBar from "../NavigationBar.jsx";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export default class Help extends Component{

@@ -16,7 +16,7 @@ let productionConfig = () => {
       mode: 'production',
       entry: path.join(__dirname, "src/js/client", "client.jsx"),
       output: {
-        path: path.join(__dirname, "dist", 'js'),
+        path: path.join(__dirname, "dist"),
         filename: 'main.js',
         publicPath: "/",
       },

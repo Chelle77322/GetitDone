@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import {DeleteItem, EditIconClicked, EditItem, CompleteItem} from "../../Actions/ToDoActions";
 
 import { connect} from "react-redux";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Grid from 'react-bootstrap/lib/Grid';
 import Row from 'react-bootstrap/lib/Row';
 import Col from 'react-bootstrap/lib/Col';

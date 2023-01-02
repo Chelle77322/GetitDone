@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import { LinkContainer } from 'react-router-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Navbar from 'react-bootstrap/lib/Navbar';
 import Nav from 'react-bootstrap/lib/Nav';

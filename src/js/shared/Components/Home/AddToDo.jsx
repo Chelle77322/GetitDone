@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import ReactDOM from "react-dom"; 
 import Redux from "redux";
 import { connect} from "react-redux";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 import {AddItem} from "../../Actions/ToDoAction.js";
@@ -13,8 +14,8 @@ import FormControl from 'react-bootstrap/lib/FormControl';
 import InputGroup from 'react-bootstrap/lib/InputGroup';
 import Button from 'react-bootstrap/lib/Button';
 
-connect(mapStateToProps)
-export default class Add extends Component{
+
+class Add extends Component{
 	render(){	
 		return(
 			<div>
@@ -42,3 +43,4 @@ export default class Add extends Component{
 		);
 	}
 }
+export default connect(null, {AddItem})(Add)

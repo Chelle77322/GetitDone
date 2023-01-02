@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 //import { LinkContainer } from 'react-router-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-import TodoList from './Home/ToDoList.jsx';
-import NavigationBar from "./NavigationBar.jsx";
+//import ToDoList from './Home/ToDoList.jsx';
+//import NavigationBar from "./NavigationBar.jsx";
 
 //import Navbar from 'react-bootstrap/lib/Navbar';
 //import Nav from 'react-bootstrap/lib/Nav';
@@ -17,7 +18,7 @@ export default class Layout extends Component{
 	render(){	
 		return(
 			<div>
-				
+				<p>🏒 Did it break or did it work</p>
 				<div className="app-content">{this.props.children}</div>
 			</div>
 		);
