@@ -1,24 +1,24 @@
 import React from "react";
-//import ReactDOM  from "react-dom";
+import ReactDOM  from "react-dom";
 import {Provider} from 'react-redux';
 import  store from "./js/shared/store.js"
-import App from "./App.jsx"
-
+import WhatToDo from "./App.jsx"
 
 //import {configureStore} from "@reduxjs/toolkit"
 //import todoReducer from "./js/shared/Reducers/ToDoReducers.js";
 //import Help from "./js/shared/Components/Help/Help.jsx";
-//const initialState = window.__REDUX_STATE__
+const initialState = window.__REDUX_STATE__
 //const store = configureStore(todoReducer, initialState);
-//console.log(store.getState());
+console.log(store.getState());
 
 
-const appElement = createRoot(document.getElementById("app"))
+const appElement = document.getElementById("app");
 
 
-render(
+
+ReactDOM.render(
 	<Provider store={store}>
-		<App />
+		<WhatToDo />
 </Provider>,
 appElement
 	

@@ -14,7 +14,7 @@ let productionConfig = () => {
   return merge([
     {
       mode: 'production',
-      entry: path.join(__dirname, "src/js/client", "client.jsx"),
+      entry: path.join(__dirname, "src/js//", "index.jsx"),
       output: {
         path: path.join(__dirname, "dist"),
         filename: 'main.js',

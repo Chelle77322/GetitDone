@@ -1,3 +1,4 @@
+
 import React from "react";
 import ReactDOM from "react-dom";
 import {configureStore} from "@reduxjs/toolkit";
@@ -10,19 +11,20 @@ import Help from "../shared/Components/Help/Help.jsx";
 import routes from "../shared/routes.js"
 import rootReducer from "../shared/Reducers/index.js";
 
-const app = ReactDOM.createRoot(document.getElementById('app'))
+const app = document.getElementById('app')
 console.log(app);
 
-const initialState = window.__REDUX_STATE__
-const store = configureStore(rootReducer,initialState);
-console.log(store.getState());
+//const initialState = window.__REDUX_STATE__
+//const store = configureStore(rootReducer,initialState);
+//console.log(store.getState());
 
 
-app.render(
+render(
 	<Provider store={store}>
 		<Router history={browserHistory} routes={routes} />
 <Layout/>
 <Help />
-	</Provider>
+	</Provider>,
+	app
 	
-	,);
+	);

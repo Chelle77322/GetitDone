@@ -1,9 +1,41 @@
+import React ,{Component} from "react";
+import {connect} from "react-redux";
+import {addToDO} from "../../Actions/action.js";
+
+class AddToDo extends Component {
+	constructor(props){
+		super(props);
+		this.state = { input: " "};
+	}
+	updateInput = input => {
+		this.setState({input});
+	};
+	handleAddToDo = () => {
+this.props.addToDO(this.state.input);
+this.setState({input: " "});
+	};
+render(){
+	return (
+		<div>
+			<input
+			onChange ={e => this.updateInput(e.target.value)}
+			value={this.state.input}/>
+		<button className="add-todo" onClick={this.handleAddToDo}>Add To List</button>
+		</div>
+	);
+}
+}
+export default connect (
+	null,
+	{addToDO}
+)(AddToDo)
+
+//** OLD CODE - NOTHING WRONG WITH IT WILL USE IT ONCE I GET APP WORKING */
 //import React, {Component} from "react";
 //import ReactDOM from "react-dom"; 
 //import Redux from "redux";
 //import { connect} from "react-redux";
 //import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 //import {AddItem} from "../../Actions/ToDoAction.js";
 
