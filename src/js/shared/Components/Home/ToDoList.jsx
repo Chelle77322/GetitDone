@@ -1,25 +1,25 @@
-import React, {Component} from "react";
-import ListToDoItems from "./ListToDoItems.jsx";
-import Add from "./AddToDo.jsx";
+//import React, {Component} from "react";
+//import ListToDoItems from "./ListToDoItems.jsx";
+//import Add from "./AddToDo.jsx";
 
 
 
-export default class ToDoList extends Component{
-	constructor() {
-		super();
-	}
+//export default class ToDoList extends Component{
+//	constructor() {
+//		super();
+//	}
 
 
-	render(){	
-		return(
-			<div>
+//	render(){	
+//		return(
+//			<div>
 
-				<Add/>
+//				<Add/>
 
-	    		<ListToDoItems/>
+//	    		<ListToDoItems/>
 
-			</div>
-		);
-	}
-}
+//			</div>
+//		);
+//	}
+//}
 

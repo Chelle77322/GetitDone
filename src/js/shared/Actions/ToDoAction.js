@@ -26,4 +26,3 @@ export const CompleteItem = (id, completedFlag) => ({
 	itemId: id,
 	completed:completedFlag
 })
-Footer

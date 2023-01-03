@@ -1,22 +1,22 @@
 import React, {Component} from "react";
 import ReactDOM from "react-dom"; 
-import {DeleteItem, EditIconClicked, EditItem, CompleteItem} from "../../Actions/ToDoActions";
+import {DeleteItem, EditIconClicked, EditItem, CompleteItem} from "../../Actions/ToDoActions.js";
 
 import { connect} from "react-redux";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
-import ListGroup from 'react-bootstrap/lib/ListGroup';
-import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
-import Glyphicon from 'react-bootstrap/lib/Glyphicon';
-import Button from 'react-bootstrap/lib/Button';
-import Modal from 'react-bootstrap/lib/Modal';
-import ModalHeader from 'react-bootstrap/lib/ModalHeader';
-import ModalBody from 'react-bootstrap/lib/ModalBody';
-import ModalTitle from 'react-bootstrap/lib/ModalTitle';
-import ModalFooter from 'react-bootstrap/lib/ModalFooter';
-import FormControl from 'react-bootstrap/lib/FormControl';
+//import Grid from 'react-bootstrap/lib/Grid';
+//import Row from 'react-bootstrap/lib/Row';
+//import Col from 'react-bootstrap/lib/Col';
+//import ListGroup from 'react-bootstrap/lib/ListGroup';
+//import ListGroupItem from 'react-bootstrap/lib/ListGroupItem';
+//import Glyphicon from 'react-bootstrap/lib/Glyphicon';
+//import Button from 'react-bootstrap/lib/Button';
+//import Modal from 'react-bootstrap/lib/Modal';
+//import ModalHeader from 'react-bootstrap/lib/ModalHeader';
+//import ModalBody from 'react-bootstrap/lib/ModalBody';
+//import ModalTitle from 'react-bootstrap/lib/ModalTitle';
+//import ModalFooter from 'react-bootstrap/lib/ModalFooter';
+//import FormControl from 'react-bootstrap/lib/FormControl';
 
 const mapStateToProps = (state) => ({
   items: state.todoReducer.items
@@ -78,7 +78,7 @@ export default class ListToDoItems extends Component{
 
 										<Modal.Footer>
 											<Button bsStyle="primary" onClick={()=>{
-												var editedItem = ReactDOM.findDOMNode(this.refs.itemEditText).value
+												var editedItem = findDOMNode(this.refs.itemEditText).value
 												this.close(index,editedItem)}}>Save Item
 											</Button>
 										</Modal.Footer>
