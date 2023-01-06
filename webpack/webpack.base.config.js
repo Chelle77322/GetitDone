@@ -39,20 +39,15 @@ let webpackBaseConfig = () => {
           {
             test: /\.module\.(sa|sc|c)ss$/,
             use: [
-              {
-              loader:'style-loader',
+              'css-loader',
+              'sass-loader',
+              'style-loader'
             
-              },
-              {
-                loader: 'css-loader',
-               
-              },
-              'sass-loader'
             ]
           },
           {
             
-            test: /\.module\.(sa|sc|c)ss$/,
+            test: /\.(sa|sc|c)ss$/,
             use: [MiniCssExtractPlugin.loader,
   
               'css-loader',
@@ -95,7 +90,9 @@ let webpackBaseConfig = () => {
           filename: 'index.html'
         }),
         new webpack.DefinePlugin({
-       'process.platform': JSON.stringify(process.platform)
+          'process.env': {
+            WEBPACK: JSON.stringify(true),
+          }
         }),
         //new optimize.DedupePlugin(),
        
@@ -118,10 +115,7 @@ let webpackBaseConfig = () => {
       ],
       devServer: {
         historyApiFallback: true,
-        static: {
-        directory: path.join(__dirname, 'dist', "js", "server"),
         
-      },
     },
   }]);
     };

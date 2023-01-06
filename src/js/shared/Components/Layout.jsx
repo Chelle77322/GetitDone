@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 //import { LinkContainer } from 'react-router-bootstrap';
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../../style/main-style.scss"
+import "../../../../style/main-style.scss";
 
 //import ToDoList from './Home/ToDoList.jsx';
 //import NavigationBar from "./NavigationBar.jsx";

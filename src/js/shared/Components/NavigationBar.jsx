@@ -5,7 +5,7 @@ import { LinkContainer } from 'react-router-bootstrap';
 //import Navbar from 'react-bootstrap/lib/Navbar';
 //import Nav from 'react-bootstrap/lib/Nav';
 //import NavItem from 'react-bootstrap/lib/NavItem';
-import "../../../style/main-style.scss"
+import "../../../../style/main-style.scss";
 
 //import Grid from 'react-bootstrap/lib/Grid';
 //import Row from 'react-bootstrap/lib/Row';

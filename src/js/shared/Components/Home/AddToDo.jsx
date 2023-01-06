@@ -1,7 +1,7 @@
 import React ,{Component} from "react";
 import {connect} from "react-redux";
 import {addToDO} from "../../Actions/action.js";
-import "../../../../style/main-style.scss"
+import "../../../../../style/main-style.scss";
 
 class AddToDo extends Component {
 	constructor(props){

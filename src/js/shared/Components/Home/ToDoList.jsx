@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import cx from "classnames";
 import { toggleToDo } from "../../Actions/action.js";
-import "../../../../style/main-style.scss"
+import "../../../../../style/main-style.scss";
 
 const ToDoList = ({ToDo, toggleToDo}) => (
     <li className="li" onClick={()=>

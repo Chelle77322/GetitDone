@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router';
 //import 'bootstrap/dist/css/bootstrap.min.css';
-import "../../../style/main-style.scss"
+import "../../../../style/main-style.scss";
 
 export default class NotFoundPage extends Component {
   render() {

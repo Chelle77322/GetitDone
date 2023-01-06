@@ -2,7 +2,7 @@ import React from "react";
 import {connect} from "react-redux";
 import ToDoList from "./ToDoList.jsx";
 import {getToDosBySeeFilter} from "../../selectors.js"
-import "../../../../style/main-style.scss"
+import "../../../../../style/main-style.scss";
 
 const ListToDo = ({ToDo}) => (
 	<ul className = "ul">

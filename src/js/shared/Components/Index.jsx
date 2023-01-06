@@ -6,7 +6,7 @@ import NavigationBar from "./NavigationBar.jsx";
 //import Row from 'react-bootstrap/lib/Row';
 //import Col from 'react-bootstrap/lib/Col';
 
-import "../../../style/main-style.scss"
+import "../../../../style/main-style.scss";
 export default class Index extends Component {
 	constructor(){
 		super();
