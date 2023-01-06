@@ -2,10 +2,11 @@ import React, {Component} from "react";
 import ToDoList from "./Home/ToDoList.jsx";
 import NavigationBar from "./NavigationBar.jsx";
 
-import Grid from 'react-bootstrap/lib/Grid';
-import Row from 'react-bootstrap/lib/Row';
-import Col from 'react-bootstrap/lib/Col';
+//import Grid from 'react-bootstrap/lib/Grid';
+//import Row from 'react-bootstrap/lib/Row';
+//import Col from 'react-bootstrap/lib/Col';
 
+import "../../../style/main-style.scss"
 export default class Index extends Component {
 	constructor(){
 		super();

@@ -4,6 +4,8 @@ import cx from "classnames";
 import {setFilter} from "../Actions/action.js"
 import { SEE_FILTERS } from "../Constants/constants.js";
 
+import "../../../style/main-style.scss"
+
 
 const SeeFilters = ({ activeFilter, setFilter})=> {
     return (

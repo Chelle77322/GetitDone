@@ -1,0 +1,56 @@
+$theme-color-primary: #a1f88593 !default;
+$theme-color-secondary: #b2b3b1 !default;
+$theme-color-background: #edf6ef !default;
+$theme-font-color: #080909 !default;
+
+$theme-brand-colors: (
+  "primary": $theme-color-primary,
+  "secondary": $theme-color-secondary,
+  "text": $theme-font-color
+) !default;
+
+$theme-color-body: scale-color($theme-color-primary, $lightness: -40%, $saturation: -50%) !default;
+$theme-color-gray: mix(#ddd8d8, $theme-color-body, 70%) !default;
+
+$theme-colors: map-merge(
+  $theme-brand-colors,
+  (
+    "text": $theme-font-color,
+    "background": $theme-color-background,
+    "light": rgb(146, 229, 217),
+    "dark": rgba(black, 0.87),
+    "gray": $theme-color-gray,
+  )
+);
+
+@function theme-color($key) {
+  @return map-get($theme-colors, $key);
+}
+
+// Add/remove to selectively generate `ink` (text color) classes
+$theme-ink-colors: "text", "secondary", "gray", "light", "dark" !default;
+
+// Add/remove to selectively generate `background` (text color) classes
+$theme-background-colors: "primary", "secondary", "background", "gray", "light" !default;
+
+$theme-button-variants: "primary", "secondary", "light", "gray" !default;
+$theme-link-color: theme-color("text") !default;
+$theme-border-radius: 12px !default;
+
+$theme-font-family: "Barlow", sans-serif;
+$theme-strong-font-weight: 600 !default;
+$theme-h1-font-size: 4.1rem !default;
+$theme-h2-font-size: 3.05rem !default;
+$theme-h3-font-size: 2rem !default;
+$theme-h4-font-size: 1.35rem !default;
+$theme-text-font-size: 1.15rem !default;
+$theme-lead-font-size: 1.35rem !default;
+$theme-font-color:"text";
+
+$theme-spacing: (
+  sm: 0.8rem,
+  md: 2.5rem,
+  lg: 4rem,
+  xl: 6.5rem,
+  auto: "auto",
+) !default;

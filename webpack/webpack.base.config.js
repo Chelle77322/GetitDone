@@ -52,7 +52,7 @@ let webpackBaseConfig = () => {
           },
           {
             
-            test: /\.(sa|sc|c)ss$/,
+            test: /\.module\.(sa|sc|c)ss$/,
             use: [MiniCssExtractPlugin.loader,
   
               'css-loader',
@@ -118,10 +118,10 @@ let webpackBaseConfig = () => {
       ],
       devServer: {
         historyApiFallback: true,
-        //static: {
-        //directory: path.join(__dirname, 'dist', "js", "server"),
+        static: {
+        directory: path.join(__dirname, 'dist', "js", "server"),
         
-      //},
+      },
     },
   }]);
     };

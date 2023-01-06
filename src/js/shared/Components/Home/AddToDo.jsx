@@ -1,6 +1,7 @@
 import React ,{Component} from "react";
 import {connect} from "react-redux";
 import {addToDO} from "../../Actions/action.js";
+import "../../../../style/main-style.scss"
 
 class AddToDo extends Component {
 	constructor(props){
@@ -20,7 +21,7 @@ render(){
 			<input
 			onChange ={e => this.updateInput(e.target.value)}
 			value={this.state.input}/>
-		<button className="add-todo" onClick={this.handleAddToDo}>Add To List</button>
+		<button className="button" onClick={this.handleAddToDo}>Add To List</button>
 		</div>
 	);
 }

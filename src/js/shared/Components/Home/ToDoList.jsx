@@ -2,12 +2,13 @@ import React from "react";
 import {connect} from "react-redux";
 import cx from "classnames";
 import { toggleToDo } from "../../Actions/action.js";
+import "../../../../style/main-style.scss"
 
 const ToDoList = ({ToDo, toggleToDo}) => (
-    <li className="to-do-item" onClick={()=>
+    <li className="li" onClick={()=>
     toggleToDo(ToDo.id)}>
-        {ToDoList && ToDo.completed ? "Y": "N"}{" "}
-        <span className={cx("todo-item__text", ToDo && ToDo.completed && "todo-item__text--completed")}>
+        {ToDoList && ToDo.completed ? "👐 ": "🤟"}{" "}
+        <span className={cx("li", ToDo && ToDo.completed && "li")}>
             {ToDo.content}
         </span>
     </li>
