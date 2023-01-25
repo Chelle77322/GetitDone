@@ -1,12 +1,14 @@
 import React, {Component} from "react";
-import ToDoList from "./Home/ToDoList.jsx";
+import ListToDo from "./Home/ToDoList.jsx";
 import NavigationBar from "./NavigationBar.jsx";
 
-//import Grid from 'react-bootstrap/lib/Grid';
-//import Row from 'react-bootstrap/lib/Row';
-//import Col from 'react-bootstrap/lib/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import 'bootstrap/dist/css/bootstrap.css';
 
 import "../../../../style/main-style.scss";
+
 export default class Index extends Component {
 	constructor(){
 		super();
@@ -19,14 +21,17 @@ export default class Index extends Component {
 		return(
 			<div>
 				<NavigationBar />
-				<Grid>
+				<Container>
 					<Row>
-						<Col xs={12} md = {8}>
+						<Col xs={10} md = {6}>
 							<h1>{this.state.title}</h1>
 						</Col>
 					</Row>
-					<ToDoList/>
-				</Grid>
+					
+				</Container>
+				<Row>
+					<ListToDo/>
+					</Row>
 			</div>
 		)
 	}

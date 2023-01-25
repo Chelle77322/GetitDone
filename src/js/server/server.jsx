@@ -1,20 +1,17 @@
 import {Provider} from "react-redux";
 import {match,RouterContext} from 'react-router'
 import {renderToString} from 'react-dom/server'
+import express from "express";
+import path from "path";
+import {store,configureStore} from 'redux'
 
-import allReducers from '../shared/Reducers/AllReducers.js'
-import {store, configureStore} from 'redux'
+import routes from "../shared/routes.js"
+import AllReducers from "../shared/Reducers/AllReducers.js";
 
-var routes = require('../shared/routes.jsx');
-
-var path = require('path');
-var bodyparser = require('body-parser');
-var express = require('express');
 
 var app = express();
-
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', "ejs");
+app.set('views', path.join(__dirname, "views"));
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -40,8 +37,9 @@ app.get('*',  (req, res) =>  {
                                }
                            }
             
-            store = configureStore(allReducers,initialState)
-            initialState = store.getState() //JSON.stringify(store.getState())
+            store = configureStore(AllReducers,initialState)
+            initialState = store.getState()
+            //JSON.stringify(store.getState())
 
         if (renderProps) {
             markup = renderToString(

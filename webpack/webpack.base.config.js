@@ -1,6 +1,6 @@
 import { merge }  from 'webpack-merge';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-//import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
+
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -67,47 +67,17 @@ let webpackBaseConfig = () => {
 
        
       },
-    // resolve:{
-      //fallback:{
-        //stream: false,
-        //url: path.resolve("url/"),
-        //fs: path.resolve("fs"),
-   // tls: false,
-   // net: false,
-   // path: path.resolve("path-browserify"),
-   //zlib: false,
-   //http: path.resolve("stream-http"),
-   // https: path.resolve("stream-http"),
-   //stream: path.resolve("stream-browserify"),
-   // crypto: path.resolve("crypto-browserify"),
-    //assert: false,
-    //async_hooks: false
-      //}
-     //},
+ 
       plugins: [
         new HtmlWebpackPlugin({
           template: './public/index.html',
           filename: 'index.html'
         }),
+        
         new webpack.DefinePlugin({
-          'process.env': {
-            WEBPACK: JSON.stringify(true),
-          }
+          'process.platform': JSON.stringify(process.platform)
         }),
-        //new optimize.DedupePlugin(),
-       
-        //new UglifyJsPlugin({
-          //uglifyOptions: {
-           // mangle: true,
-            //warnings: false,
-            //compress: {
-              //  pure_getters: true,
-                //unsafe: true,
-                //unsafe_comps: true,
-                //screw_ie8: true, // no such option in uglify
-            //},
-          //},
-        //}),
+    
         new MiniCssExtractPlugin({
 
           

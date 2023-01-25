@@ -1,20 +1,26 @@
 import React from "react";
 import AddToDo from "./js/shared/Components/Home/AddToDo.jsx";
-import ListToDo from "./js/shared/Components/Home/ListToDoItems.jsx"
-import SeeFilters from "./js/shared/Components/seeFilters.jsx";
+import ToDoList from "../src/js/shared/Components/Home/ToDoList.jsx";
+import SeeFilters from "./js/shared/Components/seeFilters.jsx"
+
+
+import "bootstrap/dist/css/bootstrap.min.css"
 import "../style/main-style.scss";
 
 
-export default function WhatToDo() {
+function WhatToDo() {
     return (
         <div className = "what-app">
-            <h1> A little To Do List</h1>
             <AddToDo />
-            <ListToDo />
+            <ToDoList />
             <SeeFilters />
+           
+
+        
             
         </div>
           
     )
   
 }
+export default WhatToDo

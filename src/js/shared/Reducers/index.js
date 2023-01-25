@@ -1,8 +1,20 @@
 import { combineReducers } from "redux";
-import seeFilters from "./seeFilters.js";
+
 import todoReduced from "./ToDoReducers.js";
+import seeFilters from "./seeFilters.js";
+import { AddItem,DeleteItem,EditIconClicked,EditItem,CompleteItem } from "./AllReducers.js";
+
+
 
 const rootReducer = combineReducers({
-     seeFilters, todoReduced
+    todoReduced,
+    seeFilters,
+    AddItem,
+    DeleteItem,
+    EditItem,
+    EditIconClicked,
+    CompleteItem
+
+    
 });
 export default rootReducer

@@ -1,4 +1,3 @@
-
 import { SEE_FILTERS } from "./Constants/constants.js";
 
 export const getToDosState = store => store.ToDo;
@@ -7,7 +6,7 @@ export const getToDoList = store =>
 getToDosState(store)? getToDosState(store).allIds: [];
 
 export const getToDoByID = (store, id)=>
-getToDosState(store)? {...getToDosState(store).byIdS[id], id}: {};
+getToDosState(store)? {...getToDosState(store).byIds[id], id}: {};
 
 export const getToDos = store =>
 getToDoList(store).map(id => getToDoByID(store, id));

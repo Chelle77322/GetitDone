@@ -34,5 +34,8 @@ module.exports = {
       FileReader: true,
       Blob: true,
       navigator: true,
+      ReactDOM: true
     },
+    
+  
   };
